@@ -5,6 +5,8 @@ body {
 .todoapp {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 h1 {
   text-align: center;
@@ -15,4 +17,8 @@ h1 {
   border: none;
   background: white;
   box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
+}
+
+.new_todo_item li{
+ margin-bottom: 1rem;
 }
