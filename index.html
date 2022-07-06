@@ -13,17 +13,20 @@
   <section class="todoapp">
     <header class="header">
       <h1>todos</h1>
-      <input id="user-input" class="new-todo" placeholder="What needs to be done?" autofocus="" />
+      <div class="input-container">
+        <input id="user-input" class="new-todo" placeholder="What needs to be done?" autofocus="" />
+        <button type="submit" id="submit-btn">Submit</button>
+      </div>
     </header>
     <section>
       <ul id="todo" class="todo-list"></ul>
     </section>
-    <button type="submit" id="submit-btn">Submit</button>
+
   </section>
 
   <script src="index.js"></script>
   <script src="test/test-helpers.js"></script>
-  <script src="test/index.test.js"></script>
+  <!-- <script src="test/index.test.js"></script> -->
 </body>
 
 </html>

@@ -6,6 +6,7 @@ test("todo item is being added correctly", () => {
 
   // enter test data into inputs
   const inputs = [
+    "",
     "Don't forget the milk",
     "Call the plumber at 07783978122",
     "Go part@£$ª¶YY",
