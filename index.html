@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Todo List</title>
-  </head>
 
-  <body>
-    <section class="todoapp">
-      <header class="header">
-        <h1>todos</h1>
-        <input
-          id="user-input"
-          class="new-todo"
-          placeholder="What needs to be done?"
-          autofocus=""
-        />
-      </header>
-      <section>
-        <ul id="todo" class="todo-list"></ul>
-      </section>
-      <button id="submit-btn">Submit</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Todo List</title>
+</head>
+
+<body>
+  <section class="todoapp">
+    <header class="header">
+      <h1>todos</h1>
+      <input id="user-input" class="new-todo" placeholder="What needs to be done?" autofocus="" />
+    </header>
+    <section>
+      <ul id="todo" class="todo-list"></ul>
     </section>
+    <button type="submit" id="submit-btn">Submit</button>
+  </section>
 
-    <script src="index.js"></script>
-    <script src="test/test-helpers.js"></script>
-    <script src="test/index.test.js"></script>
-  </body>
+  <script src="index.js"></script>
+  <script src="test/test-helpers.js"></script>
+  <script src="test/index.test.js"></script>
+</body>
+
 </html>
