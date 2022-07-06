@@ -2,23 +2,51 @@ body {
   background-color: rgb(247, 229, 232);
   font-family: "Courier New", Courier, monospace;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .todoapp {
-  display: flex;
+  max-width: 1024px;
+  margin: auto;
+  padding: 2rem;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 h1 {
   text-align: center;
   font-size: 2rem;
 }
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+#submit-btn {
+  border: 0;
+  padding: 0 1rem;
+  background: #d0c8c9;
+}
+
 .new-todo {
-  padding: 1.5rem;
+  font-size: 1.25rem;
+  padding: 1.25rem;
   border: none;
   background: white;
   box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
 }
-
-.new_todo_item li{
- margin-bottom: 1rem;
+@media (min-width: 768px) {
+  .new-todo,
+  .new_todo_item {
+    width: 25em;
+  }
+}
+.new_todo_item {
+  margin: 1rem auto;
+  font-size: 1.25rem;
+  padding: 1.25rem;
+  background: white;
 }
