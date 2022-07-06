@@ -12,10 +12,6 @@ ul {
   max-width: 1024px;
   margin: auto;
   padding: 2rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
 }
 h1 {
   text-align: center;
@@ -47,6 +43,19 @@ h1 {
 .new_todo_item {
   margin: 1rem auto;
   font-size: 1.25rem;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.25rem 3rem;
   background: white;
+  position: relative;
+}
+.toggle {
+  position: absolute;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.destroy {
+  height: 2rem;
+}
+.destroy::after {
+  content: "X";
 }
