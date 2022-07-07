@@ -59,3 +59,7 @@ h1 {
 .destroy::after {
   content: "X";
 }
+
+.checked label {
+  text-decoration: line-through;
+}
