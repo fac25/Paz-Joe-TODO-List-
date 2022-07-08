@@ -28,10 +28,6 @@ function addNewTodoItem() {
 
   const todo = document.createElement("li")
 
-  // if (todo) {
-  //   todo.addEventListener("change", checkItemsOffList)
-  // }
-
   todo.classList = "new_todo_item"
   const todoContent = `<div class="view">
   <input class="toggle" type="checkbox">
@@ -41,8 +37,12 @@ function addNewTodoItem() {
   todo.innerHTML = todoContent
   newTodo.appendChild(todo)
 
-  const toggle = document.querySelector(".toggle")
-  toggle.addEventListener("change", checkItemsOffList)
+  // SELECT ALL CLASSES OF TOGGLE AND LOOP
+  const toggle = document.querySelectorAll(".toggle")
+
+  for (i of toggle) {
+    i.addEventListener("change", checkItemsOffList)
+  }
 }
 
 /////////////////////////////////////////////////
@@ -52,18 +52,13 @@ function addNewTodoItem() {
 //////////////////////////////////////////////////
 
 function checkItemsOffList(event) {
-  // for (let i = 0; i < todo.length; i++) {
-  //   console.log(todo[i])
-  // }
-
-  if (event.target.checked === true) {
-    console.log("hiiii")
+  if (event.target.checked) {
     let parentDiv = event.target.parentNode
     parentDiv.classList.add("checked")
   }
 
   if (event.target.checked === false) {
-    console.log("Not checked")
-    todo.style.textDecoration = "none"
+    let parentDiv = event.target.parentNode
+    parentDiv.classList.remove("checked")
   }
 }
