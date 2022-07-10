@@ -6,6 +6,13 @@ const newTodo = document.getElementById("todo")
 //EVENTLISTENER(S)
 submitBtn.addEventListener("click", addNewTodoItem)
 
+//EVENTLISTENER FOR ENTER KEY
+userInput.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    addNewTodoItem()
+  }
+})
+
 /////////////////////////////////////////////////
 
 //ADD NEW TODO LIST ITEM FUNCTION
