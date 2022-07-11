@@ -27,6 +27,11 @@ function addNewTodoItem() {
   const newTodoItem = userInput.value
   userInput.value = ""
 
+  // PREVENTS THE USER ENTERING AN EMPTY STRING
+  if (newTodoItem === "") {
+    return
+  }
+
   const todo = document.createElement("li")
   todo.classList = "new_todo_item"
 
