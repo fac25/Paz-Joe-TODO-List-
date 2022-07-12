@@ -28,7 +28,7 @@ function addNewTodoItem() {
   userInput.value = ""
 
   // PREVENTS THE USER ENTERING AN EMPTY STRING
-  if (newTodoItem === "") {
+  if (newTodoItem.trim() === "") {
     return
   }
 
