@@ -45,13 +45,32 @@
 //   })
 // })
 
+test("Checking an entry marks it as complete", () => {
+  const userInput = document.querySelector("#user-input")
+  const submitBtn = document.querySelector("#submit-btn")
+
+  userInput.value = "Test entry"
+  submitBtn.click()
+
+  // SIMULATE CHECKING CHECKBOX
+  const checkbox = document.getElementsByClassName("toggle")
+  checkbox[0].click()
+
+  const actual = checkbox[0].checked
+  const expected = true
+
+  equal(actual, expected)
+
+  document.querySelector("#todo").innerHTML = ""
+})
+
 /////////////////////////////////////////////////
 
 //TEST FOR DELETE - deleteItemsOffList(event)
 
 //////////////////////////////////////////////////
 
-test("Test fort deleting one entry", () => {
+test("Test for deleting single entry", () => {
   const userInput = document.querySelector("#user-input")
   const submitBtn = document.querySelector("#submit-btn")
 
@@ -64,4 +83,6 @@ test("Test fort deleting one entry", () => {
   const exists = document.querySelector("user-input")
 
   equal(exists, null)
+
+  document.querySelector("#todo").innerHTML = ""
 })
